@@ -21,7 +21,7 @@ final class TestRouter<T> extends BaseRouter<T> {
   }
 
   <<__Override>>
-  protected function getRoutes(
+  public function getRoutes(
   ): ImmMap<HttpMethod, ImmMap<string, T>> {
     return ImmMap {
       HttpMethod::GET => $this->routes,

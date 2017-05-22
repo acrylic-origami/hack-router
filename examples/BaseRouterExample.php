@@ -27,7 +27,7 @@ use Facebook\HackRouter\HttpMethod;
 type TResponder = (function(ImmMap<string, string>):string);
 
 final class BaseRouterExample extends BaseRouter<TResponder> {
-  protected function getRoutes(
+  public function getRoutes(
   ): ImmMap<HttpMethod, ImmMap<string, TResponder>> {
     return ImmMap {
       HttpMethod::GET => ImmMap {
